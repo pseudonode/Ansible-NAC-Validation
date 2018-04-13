@@ -63,7 +63,7 @@
        debug: var=output.results[{{ item.0 }}].stdout_lines
 
      - lineinfile:
-         path: /etc/ansible/playbooks/NETOPS/NAC/NAC_PORTS_IN_MONITOR_MODE/reports/{{ inventory_hostname }}.txt
+         path: ./reports/{{ inventory_hostname }}.txt
          line: "{{ item.1 }}"
          create: yes
        with_indexed_items:  "{{ access_ports }}"
